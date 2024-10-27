@@ -7,6 +7,9 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Camp Travel",
   description: "Travel UI/UX App for Camping",
+  icons:{
+    icon:'/camp.svg'
+  }
 };
 
 export default function RootLayout({
