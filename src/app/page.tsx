@@ -1,9 +1,18 @@
-import React from 'react'
+import CampSection from "@/components/shared/CampSection";
+import FeaturesSection from "@/components/shared/FeaturesSection";
+import GetAPPSection from "@/components/shared/GetAPPSection";
+import GuideSection from "@/components/shared/GuideSection";
+import HeroSection from "@/components/shared/HeroSection";
+import React from "react";
 
 export default function HomePage() {
   return (
-    <div>
-      <h1>Hello World</h1>
-    </div>
-  )
+    <>
+      <HeroSection />
+      <CampSection />
+      <GuideSection />
+      <FeaturesSection />
+      <GetAPPSection />
+    </>
+  );
 }
