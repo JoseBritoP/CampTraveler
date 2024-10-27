@@ -1,7 +1,8 @@
-import Image from "next/image"
-import Link from "next/link"
-import { NAV_LINKS } from "@/constants"
-import Button from "./Button"
+import Image from "next/image";
+import Link from "next/link";
+// import { NAV_LINKS } from "@/constants"
+import Button from "./Button";
+import NavbarItem from "./NavbarItem";
 
 const Navbar = () => {
   return (
@@ -10,16 +11,10 @@ const Navbar = () => {
         <Image src="/hilink-logo.svg" alt="logo" width={74} height={29} />
       </Link>
 
-      <ul className="hidden h-full gap-12 lg:flex">
-        {NAV_LINKS.map((link) => (
-          <Link href={link.href} key={link.key} className="regular-16 text-gray-50 flex items-center justify-center cursor-pointer pb-1 transition-all duration-150 ease-linear hover:font-bold hover:text-green-50 hover:border-b-2 hover:border-b-green-50">
-            {link.label}
-          </Link>
-        ))}
-      </ul>
-
+      <NavbarItem />
+      
       <div className="lg:flexCenter hidden">
-        <Button 
+        <Button
           type="button"
           title="Login"
           icon="/user.svg"
@@ -27,7 +22,7 @@ const Navbar = () => {
         />
       </div>
 
-      <Image 
+      <Image
         src="menu.svg"
         alt="menu"
         width={32}
@@ -35,7 +30,7 @@ const Navbar = () => {
         className="inline-block cursor-pointer lg:hidden"
       />
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
